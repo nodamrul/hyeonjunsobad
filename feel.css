@@ -1,0 +1,151 @@
+:root{
+    --body-bg: pink;
+    --hamberger-bg: white;
+}
+
+html , body{
+    height: 100%;
+}
+body{
+    background-color: var(--body-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items : center;
+}
+.hamberger-title{
+    color: white;
+    font-size: 18px;
+    padding-bottom: 10px;
+    
+}
+.hamberger-container{
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: var(--hamberger-bg);
+}
+.hamberger,
+.hamberger::before,
+.hamberger::after{
+
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    transition: 0.5s;
+    background: pink;
+    
+}
+.hamberger::before,
+.hamberger::after {
+    content: "";
+}
+
+.hamberger{
+    top: 50px;
+    margin-left: 620px;
+}
+.hamberger::before {
+    top: -30px;
+    
+}
+.hamberger::after {
+    top: 30px;
+    
+}
+
+
+
+
+.toggle:checked ~ .hamberger::after{
+    top: 0;
+    transform: rotate(225deg);
+}
+.toggle:checked ~ .hamberger::before{
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.toggle:checked ~ .hamberger{
+
+    background: var(--hamberger-bg);
+}
+
+.toggle{
+    opacity: 0;
+}
+
+.contaier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+
+    width: 400px; 
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-image: url(배경.png);
+}
+
+nav{
+
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin-top: -150px;
+    background-image: url(히나.jpg);
+  position: relative;
+   transform: trasform 1s ease-in-out;
+   
+}
+
+nav:hover{
+transform: scale(1.2); 
+}
+
+footer{
+    width: 400px; 
+    height: 400px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: -70px;
+    background-color: white;
+    
+}
+
+h1{
+position: relative;
+top: 70px;
+}
+
+button{
+
+    position: relative;
+    top: 80px;
+    width: 200px;
+    height: 60px;
+    background-color: yellow;
+    border-radius: 100px;
+    border: 0;
+    transform: trasform 1s ease-in-out;
+}
+
+button:active{
+    transform: scale(1.2); 
+
+}
+
+.scroll{    
+    margin-top: -150px;
+}
+.white{
+
+    background-color: white;
+    width: 1000px;
+    height: 100px;
+    margin-bottom: 10px;
+}
